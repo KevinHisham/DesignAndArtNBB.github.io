@@ -1,8 +1,7 @@
-<!-- commission.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -11,7 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Design N Art | Commission</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,67 +18,24 @@
       href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="assets/images/Logo.png" />
+    <link rel="apple-touch-icon" href="assets/images/Logo.png" />
   </head>
   <body>
     <div class="bg-layer">
       <div class="bg-dim"></div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top">
-      <div class="container-fluid" style="margin: 15px 60px 0 60px">
-        <a class="navbar-brand text-white" href="index.html">
-          <img
-            src="images/Logo.png"
-            alt="Logo"
-            style="height: 50px; margin-right: 10px"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto gap-5">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="commission.html">Commission</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="site-navbar"></div>
 
-    <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 260px;
-      "
-    >
-      <h1 style="font-size: 48px">Commission</h1>
+    <div class="page-hero page-hero-md">
+      <h1 class="page-title-lg">Commission</h1>
     </div>
 
-    <div
-      class="container d-flex"
-      style="padding: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column"
-    >
-      <a href="commission1.html" class="text-decoration-none">
+    <div class="container card-stack">
+      <a href="pages/commission1.html" class="text-decoration-none">
         <div class="card text-bg-dark">
-          <img src="images/placeholder1.png" class="card-img" alt="Placeholder 1" />
+          <img src="assets/images/placeholder1.png" class="card-img" alt="Placeholder 1" />
           <div class="card-img-overlay">
             <h2 class="card-title text-white">Lorem Ipsum</h2>
             <p class="card-text text-white">Lorem Ipsum Dolor Sit Amet</p>
@@ -88,13 +44,10 @@
       </a>
     </div>
 
-    <div
-      class="container d-flex"
-      style="padding: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column"
-    >
-      <a href="commission1.html" class="text-decoration-none">
+    <div class="container card-stack">
+      <a href="pages/commission2.html" class="text-decoration-none">
         <div class="card text-bg-dark">
-          <img src="images/placeholder2.png" class="card-img" alt="Placeholder 2" />
+          <img src="assets/images/placeholder2.png" class="card-img" alt="Placeholder 2" />
           <div class="card-img-overlay">
             <h2 class="card-title text-white">Lorem Ipsum</h2>
             <p class="card-text text-white">Lorem Ipsum Dolor Sit Amet</p>
@@ -108,5 +61,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/navbar.js"></script>
+    <script>
+      renderNavbar("commission");
+    </script>
   </body>
 </html>

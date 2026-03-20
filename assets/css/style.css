@@ -1,0 +1,214 @@
+:root {
+  --text-color: #ffffff;
+  --bg-fallback: #3f5f9d;
+  --content-max-width: 1200px;
+}
+
+* {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--bg-fallback);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-dim {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  animation: dim linear;
+  animation-timeline: scroll();
+  animation-range: 0 400px;
+  animation-fill-mode: both;
+}
+
+@keyframes dim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.site-nav-inner {
+  max-width: 1200px;
+  margin: 15px auto 0;
+  padding: 0 24px;
+}
+
+.site-logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.page-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-hero-home {
+  height: 560px;
+}
+
+.page-hero-sm {
+  height: 300px;
+}
+
+.page-hero-md {
+  height: 260px;
+}
+
+.page-title-xl {
+  font-size: 72px;
+}
+
+.page-title-lg {
+  font-size: 48px;
+}
+
+.instagram-link {
+  color: #ffffff;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 45px;
+}
+
+.body-text {
+  font-size: 18px;
+}
+
+.about-wrap {
+  padding: 64px;
+}
+
+.commission-carousel {
+  width: 90%;
+  margin: auto;
+  padding: 36px;
+}
+
+.section-space-lg {
+  margin-top: 5rem;
+}
+
+.portfolio-row-pad {
+  padding: 20px;
+}
+
+.shift-left {
+  transform: translateX(-40px);
+}
+
+.shift-right {
+  transform: translateX(40px);
+}
+
+.portfolio-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-image: var(--img1);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--img2);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.portfolio-img:hover::after {
+  opacity: 1;
+}
+
+.card-stack {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.detail-page {
+  padding-top: 130px;
+}
+
+.detail-main-row {
+  padding-bottom: 20px;
+}
+
+.detail-title {
+  font-size: 72px;
+}
+
+.detail-price {
+  padding-bottom: 32px;
+}
+
+@media (max-width: 991.98px) {
+  .site-nav-inner {
+    margin: 10px auto 0;
+    padding: 0 16px;
+  }
+
+  .page-title-xl {
+    font-size: 56px;
+  }
+
+  .detail-title {
+    font-size: 52px;
+  }
+
+  .shift-left,
+  .shift-right {
+    transform: none;
+  }
+}
