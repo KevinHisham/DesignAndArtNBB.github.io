@@ -1,72 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Document</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-</head>
-<body>
- <div style="position:fixed; inset:0; background:rgba(0,0,0,0.4); pointer-events:none; z-index:-1;"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design N Art | Commission</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<nav class="navbar navbar-expand-lg bg-body-transparent fixed-top">
-  <div class="container-fluid" style="margin: 15px 60px 0 60px;">
-    <a class="navbar-brand text-white" href="index.html">
-      <img src="images/Logo.png" alt="Logo" style="height: 50px; margin-right: 10px;">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); pointer-events: none; z-index: -1;"></div>
+    <div class="bg-layer" aria-hidden="true">
+      <div class="bg-dim"></div>
+    </div>
+
+    <div id="site-navbar"></div>
+
+    <header class="page-hero page-hero-md">
+      <h1 class="page-title-lg">Commission</h1>
+    </header>
+
+  <main class="container card-stack">
+    <a href="pages/commission1.html" class="text-decoration-none d-block w-100">
+      <div class="card text-bg-dark border-0 overflow-hidden">
+        <img
+          src="assets/images/X3Nart.webp"
+          class="card-img"
+          style="height: 240px; object-fit: cover; filter: brightness(50%);"
+          alt="Anime illustration portfolio header by X3NArt"
+        />
+        <div class="card-img-overlay">
+          <h2 class="card-title text-white">X3NArt</h2>
+          <p class="card-text text-white body-text max-w-text">
+            I'm a Junior artist that focuses on creating anime illustrations and 2D animations.<br />
+            Most of my art focuses on anime fanart with background ambience that fits the character's personality!
+          </p>
+        </div>
+      </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-5">
-        <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="commission.html">Commission</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </main>
 
-<div style="display:flex; justify-content:center; align-items:center; flex-direction: column; height:260px;">
-    <h1 style="font-size: 48px;">Commission</h1>
-</div>
-
-
-<div class="container d-flex" style="padding:20px ;display:flex; justify-content:center; align-items:center; flex-direction: column;">
-  <a href="commission1.html" class="text-decoration-none">
-    <div class="card text-bg-dark">
-      <img src="images/placeholder1.png" class="card-img" alt="...">
-      <div class="card-img-overlay">
-        <h2 class="card-title text-white">Lorem Ipsum</h2>
-        <p class="card-text text-white">Lorem Ipsum Dolor Sit Amet</p>
+<!-- uncomment this if you want to add more commission artists -->
+  <!-- <main class="container card-stack">
+    <a href="pages/commission1.html" class="text-decoration-none d-block w-100">
+      <div class="card text-bg-dark border-0 overflow-hidden">
+        <img
+          src="assets/images/LoremIpsumt.webp"
+          class="card-img"
+          style="height: 240px; object-fit: cover; filter: brightness(50%);"
+          alt="Anime illustration portfolio header by XLoremIpsum"
+        />
+        <div class="card-img-overlay">
+          <h2 class="card-title text-white">XLoremIpsum</h2>
+          <p class="card-text text-white body-text max-w-text">
+            I'm a Junior artist that focuses on creating anime illustrations and 2D animations.<br />
+            Most of my art focuses on anime fanart with background ambience that fits the character's personality!
+          </p>
+        </div>
       </div>
-    </div>
-  </a>
-</div>
+    </a>
+  </main> -->
 
-<div class="container d-flex" style="padding:20px ;display:flex; justify-content:center; align-items:center; flex-direction: column;">
-  <a href="commission1.html" class="text-decoration-none">
-    <div class="card text-bg-dark">
-      <img src="images/placeholder2.png" class="card-img" alt="...">
-      <div class="card-img-overlay">
-        <h2 class="card-title text-white">Lorem Ipsum</h2>
-        <p class="card-text text-white">Lorem Ipsum Dolor Sit Amet</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-</div>
-</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/navbar.js"></script>
+    <script>
+      renderNavbar("commission");
+    </script>
+  </body>
+</html>
