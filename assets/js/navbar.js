@@ -77,7 +77,7 @@
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
 
-  // Bail out on pages that don't have a lightbox
+  // Keluar fungsi jika halaman tidak menyediakan elemen lightbox
   if (!lightbox || !lightboxImg) return;
 
   function openLightbox(src, alt) {
@@ -87,18 +87,9 @@
     lightbox.classList.add('active');
   }
 
-  // Handler for .portfolio-img (div with --img1 CSS variable)
-  document.querySelectorAll('.portfolio-img').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      const img1 = getComputedStyle(el).getPropertyValue('--img1').trim();
-      const match = img1.match(/url\(["']?(.+?)["']?\)/);
-      if (match) openLightbox(match[1], '');
-    });
-  });
-
-  // Handler for .card-img and .thumb-img (actual <img> elements)
-  document.querySelectorAll('.card-img, .thumb-img').forEach(img => {
+  // 🛠️ UPDATED: Handler gabungan untuk semua elemen <img> murni
+  // Menargetkan portfolio utama (.portfolio-img-fluid) dan halaman detail (.card-img, .thumb-img)
+  document.querySelectorAll('.portfolio-img-fluid, .card-img, .thumb-img').forEach(img => {
     img.addEventListener('click', () => {
       openLightbox(img.src, img.alt);
     });

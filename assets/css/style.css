@@ -143,12 +143,13 @@ body {
 }
 
 /* ==========================================================================
-   5. PORTFOLIO & CARDS
+   5. PORTFOLIO & CARDS (UPDATED)
    ========================================================================== */
 .portfolio-row-pad {
   padding: 20px;
 }
 
+/* TETAP DISISAKAN - dipakai untuk layouting */
 .card-stack {
   display: flex;
   flex-direction: column;
@@ -157,6 +158,7 @@ body {
   padding: 20px;
 }
 
+/* TETAP DISISAKAN - untuk efek zigzag portfolio Anda */
 .shift-left {
   transform: translateX(-40px);
 }
@@ -165,32 +167,40 @@ body {
   transform: translateX(40px);
 }
 
-.portfolio-img {
+/* BARU: Container pembungkus tag <img> agar rasionya tetap 4:5 */
+.portfolio-img-container {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   cursor: zoom-in;
-  background-image: var(--img1);
-  background-size: cover;
-  background-position: center;
 }
 
-.portfolio-img::after {
-  content: "";
+/* BARU: Mengatur tag <img> murni agar berlagak seperti background cover */
+.portfolio-img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BARU: Mengatur overlay gambar clickhere.webp saat di-hover */
+.portfolio-overlay {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
-  background-image: var(--img2);
   background-size: cover;
   background-position: center;
+  pointer-events: none; /* Supaya klik tembus ke gambar asli di bawahnya */
 }
 
-.portfolio-img:hover::after {
+/* BARU: Efek hover untuk memunculkan clickhere.webp */
+.portfolio-img-container:hover .portfolio-overlay {
   opacity: 1;
 }
 
+/* TETAP DISISAKAN - dipakai untuk thumbnail di halaman detail */
 .thumb-wrapper {
   display: flex;
   justify-content: center;
@@ -200,6 +210,7 @@ body {
   overflow: hidden;
 }
 
+/* TETAP DISISAKAN - dipakai untuk gambar thumbnail di halaman detail */
 .thumb-img {
   width: 100%;
   height: 100%;
